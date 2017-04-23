@@ -43,7 +43,7 @@ defaults:
     type: recipe_tags
   values:
     permalink: "/tags/:title/"
-    tag_type: 
+    tag type: 
     layout: index
 - scope:
     path: ''
