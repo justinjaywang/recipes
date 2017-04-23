@@ -3,8 +3,13 @@ layout: default
 ---
 
 <main class="main">
-  This is the sources index page
-  {% for recipe in site.recipes %}
-    {% include recipe-card.html recipe=recipe %}
-  {% endfor %}
+  <header><h1>{{ page.title }}</h1></header>
+  <ul>
+    {% for source in site.recipe_sources %}
+      <li>
+        <img src="{{ source.image }}">
+        <a href="{{ source.url }}">{{ source.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
 </main>
