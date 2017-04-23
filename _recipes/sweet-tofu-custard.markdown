@@ -19,7 +19,7 @@ ingredients:
   item: unflavored gelatin
 - unit: 
   unit_type: heading
-  item: For the syrip
+  item: For the syrup
 - unit: 2
   unit_type: c
   item: water

@@ -6,13 +6,45 @@ layout: default
   <article class="recipe">
     <h1>{{ page.title }}</h1>
     <section class="recipe__intro">{{ page.intro_note | markdownify }}</section>
-    <section class="recipe__ingredients">
+    <ul class="recipe__ingredients">
+      {% comment %} find max vol in all ingredients {% endcomment %}
+      {% assign max_vol = 0 %}
       {% for i in page.ingredients %}
-        {{ i.unit }}
-        {{ i.unit_type }}
-        {{ i.item }}
+        {% if i.unit_type == 'c' %}
+          {% assign v = i.unit | times: 48 %}
+          {% if v > max_vol %}{% assign max_vol = v %}{% endif %}
+        {% elsif i.unit_type == 'T' %}
+          {% assign v = i.unit | times: 3 %}
+          {% if v > max_vol %}{% assign max_vol = v %}{% endif %}
+        {% elsif i.unit_type == 't' %}
+          {% assign v = i.unit %}
+          {% if v > max_vol %}{% assign max_vol = v %}{% endif %}
+        {% endif %}
       {% endfor %}
-    </section>
+      {% assign max_vol = max_vol | times: 1.0 %}{% comment %} make a float {% endcomment %}
+
+      {% for i in page.ingredients %}
+        {% if i.unit_type == 'heading' %}
+          <h2>{{ i.item }}</h2>
+        {% else %}{% comment %} normal ingredient {% endcomment %}
+          {% if i.unit_type == 'c' %}
+            {% assign vol = i.unit | times: 48 %}
+          {% elsif i.unit_type == 'T' %}
+            {% assign vol = i.unit | times: 3 %}
+          {% elsif i.unit_type == 't' %}
+            {% assign vol = i.unit %}
+          {% else %}
+            {% assign vol = false %}
+          {% endif %}
+
+          <li class="recipe__ingredient"{% if vol %} data-vol="{{ vol | divided_by: max_vol }}"{% endif %}>
+            <span class="recipe__ingredient__unit">{{ i.unit | default: '+' }}&nbsp;{{ i.unit_type }}</span>
+            <span>{{ i.item }}</span>
+          </li>
+
+        {% endif %}
+      {% endfor %}
+    </ul>
     <section class="recipe__content">{{ page.content | markdownify }}</section>
     <footer class="recipe__meta">
       {% if page.tags.size > 0 %}
