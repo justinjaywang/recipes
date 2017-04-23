@@ -5,6 +5,9 @@ tags:
 source: The Food of Taiwan
 intro_note: Makes 4 to 6 servings
 ingredients:
+- unit: 
+  unit_type: heading
+  item: For the tofu custard
 - unit: 4
   unit_type: c
   item: unsweetened or lightly sweetened soy milk
@@ -14,6 +17,9 @@ ingredients:
 - unit: 1
   unit_type: T
   item: unflavored gelatin
+- unit: 
+  unit_type: heading
+  item: For the syrip
 - unit: 2
   unit_type: c
   item: water
