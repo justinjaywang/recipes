@@ -18,7 +18,7 @@ ingredients:
   unit_type: c
   item: water
 - unit: 1
-  unit_type:
+  unit_type: 
   item: 2-inch piece fresh ginger, peeled and sliced into 8 to 10 thick discs
 - unit: 1/2
   unit_type: c

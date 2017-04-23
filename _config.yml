@@ -2,14 +2,11 @@
 title: Recipes
 timezone: America/New_York
 collections:
-  uploads:
-    title: Uploads
+  posts:
+    title: Posts
     output: true
   recipes:
     title: Recipes
-    output: true
-  recipe_tags:
-    title: Tags
     output: true
   recipe_sources:
     title: Sources
@@ -17,6 +14,12 @@ collections:
   tag_types:
     title: Tag Types
     output: false
+  recipe_tags:
+    title: Tags
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 defaults:
 - scope:
     path: ''
@@ -73,6 +76,6 @@ sass:
 google_analytics: 
 nav:
 - text: Sources
-  link: /sources/
+  link: "/sources/"
 - text: About
-  link: /about/
+  link: "/about/"
