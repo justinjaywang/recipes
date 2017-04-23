@@ -1,0 +1,78 @@
+---
+title: Recipes
+timezone: America/New_York
+collections:
+  uploads:
+    title: Uploads
+    output: true
+  recipes:
+    title: Recipes
+    output: true
+  recipe_tags:
+    title: Tags
+    output: true
+  recipe_sources:
+    title: Sources
+    output: true
+  tag_types:
+    title: Tag Types
+    output: false
+defaults:
+- scope:
+    path: ''
+  values:
+    layout: page
+- scope:
+    path: ''
+    type: recipes
+  values:
+    permalink: "/recipe/:title/"
+    layout: recipe
+    tags: 
+    source: 
+    intro_note: 
+    ingredients:
+    - unit: 
+      unit_type: 
+      item: 
+- scope:
+    path: ''
+    type: recipe_tags
+  values:
+    permalink: "/tags/:title/"
+    tag_type: 
+    layout: index
+- scope:
+    path: ''
+    type: recipe_sources
+  values:
+    permalink: "/sources/:title/"
+    image: 
+    layout: index
+url: http://recipes.justinjay.wang
+description: A catalog of recipes.
+repository: justinjaywang/recipes
+permalink: pretty
+exclude:
+- Gemfile
+- Gemfile.lock
+- package.json
+- Gruntfile*
+- npm-debug.log
+- README*
+- node_modules
+- ".gitignore"
+- ".jekyll-metadata"
+gems:
+- jekyll-seo-tag
+- jekyll-sitemap
+markdown: kramdown
+sass:
+  sass_dir: assets/styles/
+  style: compressed
+google_analytics: 
+nav:
+- text: Sources
+  link: /sources/
+- text: About
+  link: /about/

@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<main class="main">
+  <article class="recipe">
+    <h1>{{ page.title }}</h1>
+    <section class="recipe__intro">{{ page.intro_note | markdownify }}</section>
+    <section class="recipe__ingredients">
+      {% for i in page.ingredients %}
+        {{ i.unit }}
+        {{ i.unit_type }}
+        {{ i.item }}
+      {% endfor %}
+    </section>
+    <section class="recipe__content">{{ page.content | markdownify }}</section>
+    <footer class="recipe__meta">
+      {% if page.tags.size > 0 %}
+        <div class="recipe__meta__tags">
+          Tags:
+          <ul>
+            {% for tag in page.tags %}
+              {% for site_tag in site.recipe_tags %}
+                {% if site_tag.title == tag %}
+                  <li><a href="{{ site_tag.url }}">{{ site_tag.title }}</a></li>
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+      {% if page.source %}
+        <div class="recipe__meta__source">
+          Source:
+          {% for site_source in site.recipe_sources %}
+            {% if site_source.title == page.source %}
+              <a href="{{ site_source.url }}">{{ site_source.content | markdownify }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+      
+    </footer>
+  </article>
+  {% comment %} TO DO
+  <div class="related">
+    <h2>Related</h2>
+  </div>
+  {% endcomment %}
+  <footer>
+    <a href="/">Back to Index</a>
+  </footer>
+</main>

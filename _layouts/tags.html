@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+<main class="main">
+  This is the tag index page
+  {% for recipe in site.recipes %}
+    {% include recipe-card.html recipe=recipe %}
+  {% endfor %}
+</main>
