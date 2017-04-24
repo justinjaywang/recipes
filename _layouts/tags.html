@@ -5,7 +5,9 @@ layout: default
 <main class="main">
   <header><h1>{{ page.title }}</h1></header>
   <ul>
-    {% for tag in page.collection %}
+    {% assign c = site.collections | where: 'title', page.title | first %}
+    {% assign tags = c.docs | sort: 'title' %}
+    {% for tag in tags %}
       <li><a href="{{ tag.url }}"><h4>{{ tag.title }}<h4></a></li>
     {% endfor %}
   </ul>
