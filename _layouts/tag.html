@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<main class="main">
+  <header>
+    {% assign c = site.collections | where: 'label', page.collection | first %}
+    {% assign recipes = site.recipes | where_exp: 'r', 'r[page.collection] contains page.title' %}
+    {% assign size = c.title.size | minus: 1 %}
+    {{ c.title | slice: 0, size }}: {{ page.title }}
+  </header>
+  {% for recipe in recipes %}
+    {% include recipe-card.html recipe=recipe %}
+  {% endfor %}
+</main>

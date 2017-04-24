@@ -9,7 +9,7 @@ layout: default
     <ul class="recipe__ingredients">
       {% comment %} find max vol in all ingredients {% endcomment %}
       {% assign max_vol = 0 %}
-      {% for i in page.ingredients %}
+      {% for i in page.recipe_ingredients %}
         {% if i.unit_type == 'c' %}
           {% assign v = i.unit | times: 48 %}
           {% if v > max_vol %}{% assign max_vol = v %}{% endif %}
@@ -23,7 +23,7 @@ layout: default
       {% endfor %}
       {% assign max_vol = max_vol | times: 1.0 %}{% comment %} make a float {% endcomment %}
 
-      {% for i in page.ingredients %}
+      {% for i in page.recipe_ingredients %}
         {% if i.unit_type == 'heading' %}
           <h2>{{ i.item }}</h2>
         {% else %}{% comment %} normal ingredient {% endcomment %}

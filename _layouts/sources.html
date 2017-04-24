@@ -5,10 +5,10 @@ layout: default
 <main class="main">
   <header><h1>{{ page.title }}</h1></header>
   <ul>
-    {% for source in site.recipe_sources %}
+    {% for source in site.sources %}
       <li>
-        <img src="{{ source.image }}">
-        <a href="{{ source.url }}">{{ source.title }}</a>
+        <a href="{{ source.url }}"><img src="{{ source.image }}"></a>
+        <a href="{{ source.url }}"><h4>{{ source.title }}</h4></a>
       </li>
     {% endfor %}
   </ul>

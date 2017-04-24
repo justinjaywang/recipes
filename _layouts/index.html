@@ -3,26 +3,20 @@ layout: default
 ---
 
 <main class="main">
-  This is the index page with collection {{ page.collection }}
-  {% if page.collection == 'recipe_sources' %}
-    {% assign recipes = site.recipes | where_exp: 'r', 'r.source == page.title' %}
-    <header>
-      <div>Source: {{ page.content | markdownify }}</div>
-      <img src="{{ page.image }}">
-    </header>
-  {% elsif page.collection == 'recipe_tags' %}
-    {% assign recipes = site.recipes | where_exp: 'r', 'r.tags contains page.title' %}
-    <header>Tag: {{ page.title }}</header>
-  {% else %}
+  <header>
     {% assign recipes = site.recipes %}
-    <ul class="filters">
-      {% for tt in site.tag_types %}
-        <li class="filter">
-          <h4>{{ tt.title }}</h4>
-        </li>
-      {% endfor %}
-    </ul>
-  {% endif %}
+    {% for tt in site.tag_types %}
+      <details class="tag-type">
+        <summary class="tag-type__title">{{ tt }}</summary>
+        {% assign c = site.collections | where: 'title', tt | first %}
+        <ul class="tag-type__items tag-type__items--{{ c.label }}">
+          {% for tag in c.docs %}
+            <li class="tag-type__item"><a href="{{ tag.url }}" class="tag-type__link">{{ tag.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </details>
+    {% endfor %}
+  </header>
   {% for recipe in recipes %}
     {% include recipe-card.html recipe=recipe %}
   {% endfor %}

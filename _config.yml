@@ -8,14 +8,20 @@ collections:
   recipes:
     title: Recipes
     output: true
-  recipe_sources:
+  sources:
     title: Sources
     output: true
-  tag_types:
-    title: Tag Types
-    output: false
-  recipe_tags:
-    title: Tags
+  ingredients:
+    title: Ingredients
+    output: true
+  methods:
+    title: Methods
+    output: true
+  styles:
+    title: Styles
+    output: true
+  courses: 
+    title: Courses
     output: true
   uploads:
     title: Uploads
@@ -31,27 +37,51 @@ defaults:
   values:
     permalink: "/recipe/:title/"
     layout: recipe
-    tags: 
+    ingredients:
+    - 
+    methods:
+    - 
+    styles:
+    - 
+    courses:
+    - 
     source: 
     intro_note: 
-    ingredients:
+    recipe_ingredients:
     - unit: 
       unit_type: 
       item: 
 - scope:
     path: ''
-    type: recipe_tags
+    type: ingredients
   values:
-    permalink: "/tags/:title/"
-    tag type: 
-    layout: index
+    permalink: "/ingredients/:title/"
+    layout: tag
 - scope:
     path: ''
-    type: recipe_sources
+    type: methods
+  values:
+    permalink: "/methods/:title/"
+    layout: tag
+- scope:
+    path: ''
+    type: styles
+  values:
+    permalink: "/styles/:title/"
+    layout: tag
+- scope:
+    path: ''
+    type: courses
+  values:
+    permalink: "/courses/:title/"
+    layout: tag
+- scope:
+    path: ''
+    type: sources
   values:
     permalink: "/sources/:title/"
     image: 
-    layout: index
+    layout: source
 url: http://recipes.justinjay.wang
 description: A catalog of recipes.
 repository: justinjaywang/recipes
@@ -79,3 +109,11 @@ nav:
   link: "/sources/"
 - text: About
   link: "/about/"
+tag_types:
+- Ingredients
+- Styles
+- Methods
+- Courses
+quotes:
+- "I ordered the jerk. She said “You are what you eat.”"
+- "Another quote test."

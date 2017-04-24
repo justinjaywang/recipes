@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<main class="main">
+  <header>
+    {% assign recipes = site.recipes | where_exp: 'r', 'r.source == page.title' %}
+    <h4>Source: {{ page.content | markdownify }}</h4>
+    <img src="{{ page.image }}">
+  </header>
+  {% for recipe in recipes %}
+    {% include recipe-card.html recipe=recipe %}
+  {% endfor %}
+</main>

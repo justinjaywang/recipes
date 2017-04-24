@@ -1,5 +1,4 @@
 ---
 title: Taiwanese
-type: Styles
 ---
 
