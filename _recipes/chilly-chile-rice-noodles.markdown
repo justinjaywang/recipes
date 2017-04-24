@@ -1,11 +1,11 @@
 ---
 title: Chilly Chile Rice Noodles
 date: 2017-04-23 23:57:00 -04:00
-ingredients:
-- noodles
 tags:
 - Asian
 - modern
+ingredients:
+- noodles
 source: Hey There, Dumpling!
 ingredients_list:
 - unit: 8

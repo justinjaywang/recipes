@@ -1,10 +1,10 @@
 ---
 title: Sweet Tofu Custard (Tian Dou Hua)
-ingredients:
-- soy milk
 tags:
 - Taiwanese
 - desserts
+ingredients:
+- soy milk
 source: The Food of Taiwan
 notes: Makes 4 to 6 servings
 ingredients_list:
