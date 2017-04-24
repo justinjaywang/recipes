@@ -7,25 +7,25 @@ layout: default
     <h1>{{ page.title }}</h1>
     <section class="recipe__intro">{{ page.intro_note | markdownify }}</section>
     <ul class="recipe__ingredients">
+      <h2>Ingredients</h2>
       {% comment %} find max vol in all ingredients {% endcomment %}
-      {% assign max_vol = 0 %}
+      {% assign max_vol = 0.0 %}
       {% for i in page.recipe_ingredients %}
         {% if i.unit_type == 'c' %}
-          {% assign v = i.unit | times: 48 %}
+          {% assign v = i.unit | times: 48.0 %}
           {% if v > max_vol %}{% assign max_vol = v %}{% endif %}
         {% elsif i.unit_type == 'T' %}
-          {% assign v = i.unit | times: 3 %}
+          {% assign v = i.unit | times: 3.0 %}
           {% if v > max_vol %}{% assign max_vol = v %}{% endif %}
         {% elsif i.unit_type == 't' %}
-          {% assign v = i.unit %}
+          {% assign v = i.unit | times: 1.0 %}
           {% if v > max_vol %}{% assign max_vol = v %}{% endif %}
         {% endif %}
       {% endfor %}
-      {% assign max_vol = max_vol | times: 1.0 %}{% comment %} make a float {% endcomment %}
 
       {% for i in page.recipe_ingredients %}
         {% if i.unit_type == 'heading' %}
-          <h2>{{ i.item }}</h2>
+          <h4>{{ i.item }}</h4>
         {% else %}{% comment %} normal ingredient {% endcomment %}
           {% if i.unit_type == 'c' %}
             {% assign vol = i.unit | times: 48 %}
@@ -45,7 +45,10 @@ layout: default
         {% endif %}
       {% endfor %}
     </ul>
-    <section class="recipe__content">{{ page.content | markdownify }}</section>
+    <section class="recipe__content">
+      <h2>Preparation</h2>
+      {{ page.content | markdownify }}
+    </section>
     <footer class="recipe__meta">
       {% if page.tags.size > 0 %}
         <div class="recipe__meta__tags">
@@ -64,7 +67,7 @@ layout: default
       {% if page.source %}
         <div class="recipe__meta__source">
           Source:
-          {% for site_source in site.recipe_sources %}
+          {% for site_source in site.sources %}
             {% if site_source.title == page.source %}
               <a href="{{ site_source.url }}">{{ site_source.content | markdownify }}</a>
             {% endif %}
