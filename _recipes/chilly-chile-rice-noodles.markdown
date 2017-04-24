@@ -1,13 +1,13 @@
 ---
 title: Chilly Chile Rice Noodles
 date: 2017-04-23 23:57:00 -04:00
-recipe_ingredients:
+ingredients:
 - noodles
-recipe_tags:
+tags:
 - Asian
 - modern
-recipe_source: Hey There, Dumpling!
-ingredients:
+source: Hey There, Dumpling!
+ingredients_list:
 - unit: 8
   unit_type: oz
   item: rice stick noodles

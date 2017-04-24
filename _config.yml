@@ -31,13 +31,13 @@ defaults:
   values:
     permalink: "/recipe/:title/"
     layout: recipe
-    recipe_ingredients:
-    - 
-    recipe_tags:
-    - 
-    recipe_source: 
-    notes: 
     ingredients:
+    - 
+    tags:
+    - 
+    source: 
+    notes: 
+    ingredients_list:
     - unit: 
       unit_type: 
       item: 

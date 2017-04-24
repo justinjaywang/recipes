@@ -10,7 +10,7 @@ layout: default
       <h2>Ingredients</h2>
       {% comment %} find max vol in all ingredients {% endcomment %}
       {% assign max_vol = 0.0 %}
-      {% for i in page.ingredients %}
+      {% for i in page.ingredients_list %}
         {% if i.unit_type == 'c' %}
           {% assign v = i.unit | times: 48.0 %}
           {% if v > max_vol %}{% assign max_vol = v %}{% endif %}
@@ -23,7 +23,7 @@ layout: default
         {% endif %}
       {% endfor %}
 
-      {% for i in page.ingredients %}
+      {% for i in page.ingredients_list %}
         {% if i.unit_type == 'heading' %}
           <h4>{{ i.item }}</h4>
         {% else %}{% comment %} normal ingredient {% endcomment %}
@@ -52,13 +52,16 @@ layout: default
     <footer class="recipe__meta">
       {% for tt in site.tag_types %}
         {% assign c = site.collections | where: 'title', tt | first %}
-        {% assign label = c.label %}
+        {% assign recipe_label = c.label %}
+        {% assign start = 7 %}
+        {% assign length = recipe_label.size %}
+        {% assign label = recipe_label | slice: start, length %}
         {% if page[label].size > 0 %}
           <div class="recipe__meta__tags">
             {{ tt }}:
             <ul>
               {% for tag in page[label] %}
-                {% for site_tag in site[label] %}
+                {% for site_tag in site[recipe_label] %}
                   {% if site_tag.title == tag %}
                     <li><a href="{{ site_tag.url }}">{{ site_tag.title }}</a></li>
                   {% endif %}
@@ -68,11 +71,11 @@ layout: default
           </div>
         {% endif %}
       {% endfor %}
-      {% if page.recipe_source %}
+      {% if page.source %}
         <div class="recipe__meta__source">
           Source:
           {% for site_source in site.recipe_sources %}
-            {% if site_source.title == page.recipe_source %}
+            {% if site_source.title == page.source %}
               <a href="{{ site_source.url }}">{{ site_source.content | markdownify }}</a>
             {% endif %}
           {% endfor %}
