@@ -6,7 +6,7 @@ recipe_tags:
 - Taiwanese
 - dessert
 recipe_source: The Food of Taiwan
-intro: Makes 4 to 6 servings
+notes: Makes 4 to 6 servings
 ingredients:
 - unit: 
   unit_type: heading

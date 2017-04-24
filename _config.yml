@@ -36,7 +36,7 @@ defaults:
     recipe_tags:
     - 
     recipe_source: 
-    intro: 
+    notes: 
     ingredients:
     - unit: 
       unit_type: 
