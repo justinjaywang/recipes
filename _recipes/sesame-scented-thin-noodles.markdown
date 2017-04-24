@@ -27,4 +27,4 @@ In a small saucepan, heat the oil over medium heat for 2 to 3 minutes, or until 
 
 Cook the noodles according to the package instructions and drain.
 
-Toss the noddles thoroughly with the warm oil to coat. Divide among 4 to 6 serving bowls and top with the fried shallots.
+Toss the noodles thoroughly with the warm oil to coat. Divide among 4 to 6 serving bowls and top with the fried shallots.
