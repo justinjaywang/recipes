@@ -2,6 +2,15 @@
 title: Recipes
 timezone: America/New_York
 collections:
+  courses:
+    title: Courses
+    output: true
+  ingredients:
+    title: Ingredients
+    output: true
+  methods:
+    title: Methods
+    output: true
   posts:
     title: Posts
     output: true
@@ -11,17 +20,8 @@ collections:
   sources:
     title: Sources
     output: true
-  ingredients:
-    title: Ingredients
-    output: true
-  methods:
-    title: Methods
-    output: true
   styles:
     title: Styles
-    output: true
-  courses: 
-    title: Courses
     output: true
   uploads:
     title: Uploads
@@ -115,5 +115,5 @@ tag_types:
 - Methods
 - Courses
 quotes:
-- "I ordered the jerk. She said “You are what you eat.”"
-- "Another quote test."
+- I ordered the jerk. She said “You are what you eat.”
+- Another quote test.

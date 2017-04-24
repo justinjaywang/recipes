@@ -2,7 +2,7 @@
 title: Sweet Tofu Custard (Tian Dou Hua)
 ingredients:
 - soy milk
-methods:
+methods: 
 styles:
 - Taiwanese
 courses:
