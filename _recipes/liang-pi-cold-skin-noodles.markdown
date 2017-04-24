@@ -1,5 +1,5 @@
 ---
-title: Liang Pi (cold-skin noodles)
+title: Liang Pi (Cold-Skin Noodles)
 date: 2017-04-24 08:33:00 -04:00
 tags:
 - Asian
