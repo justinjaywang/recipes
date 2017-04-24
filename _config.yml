@@ -2,9 +2,6 @@
 title: Recipes
 timezone: America/New_York
 collections:
-  recipe_tags:
-    title: Tags
-    output: true
   recipe_ingredients:
     title: Ingredients
     output: true
@@ -16,6 +13,9 @@ collections:
     output: true
   recipe_sources:
     title: Sources
+    output: true
+  recipe_tags:
+    title: Tags
     output: true
   uploads:
     title: Uploads
@@ -33,7 +33,7 @@ defaults:
     layout: recipe
     recipe_ingredients:
     - 
-    recipe_tags: 
+    recipe_tags:
     - 
     recipe_source: 
     intro: 
