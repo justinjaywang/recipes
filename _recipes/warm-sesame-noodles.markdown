@@ -6,6 +6,7 @@ tags:
 - Taiwanese
 ingredients:
 - noodles
+- peanut butter
 source: Hey There, Dumpling!
 ingredients_list:
 - unit: 8
