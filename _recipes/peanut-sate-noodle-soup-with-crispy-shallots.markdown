@@ -6,6 +6,7 @@ tags:
 ingredients:
 - noodles
 - chicken
+- peanut butter
 source: Hey There, Dumpling!
 ingredients_list:
 - unit: 1
