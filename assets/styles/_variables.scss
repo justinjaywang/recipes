@@ -1,0 +1,29 @@
+// typography
+// ----------
+
+$font-size-html: 20px;
+
+$font-family-body: "franklin-gothic-urw", Helvetica, sans-serif;
+$font-weight-body: 500;
+$line-height-normal: 1.4;
+
+// colors
+// ------
+
+$color-black: #000;
+$color-white: #fff;
+
+// sizing and spacing
+// ------------------
+
+$v: $line-height-normal * 1rem;
+
+// grid
+// ----
+
+// xs | sm | md | lg
+$bp-xs-sm: 36rem;
+$bp-sm-md: 54rem;
+$bp-md-lg: 72rem;
+
+$gutter:    1.5rem;

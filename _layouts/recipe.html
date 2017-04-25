@@ -37,10 +37,12 @@ layout: default
             {% assign vol = false %}
           {% endif %}
 
-          <li class="recipe__ingredient"{% if vol %} data-vol="{{ vol | divided_by: max_vol }}"{% endif %}>
-            <span class="recipe__ingredient__unit">{{ i.unit | default: '+' }}&nbsp;{{ i.unit_type }}</span>
-            <span>{{ i.item }}</span>
-          </li>
+          {% if i.item %}
+            <li class="recipe__ingredient"{% if vol %} data-vol="{{ vol | divided_by: max_vol }}"{% endif %}>
+              <span class="recipe__ingredient__unit">{{ i.unit | default: '+' }}&nbsp;{{ i.unit_type }}</span>
+              <span>{{ i.item }}</span>
+            </li>
+          {% endif %}
 
         {% endif %}
       {% endfor %}

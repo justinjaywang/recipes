@@ -1,0 +1,21 @@
+html {
+  font-size: $font-size-html;
+}
+body {
+  font-size: 1em;
+  font-family: $font-family-body;
+  font-weight: $font-weight-body;
+  line-height: $line-height-normal;
+  -webkit-font-smoothing: antialiased;
+  -font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $color-black;
+  background-color: $color-white;
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
