@@ -1,6 +1,9 @@
 ---
 title: Asparagus
 date: 2017-04-24 21:44:00 -04:00
+ingredients:
+- asparagus
+source: L.A. Son
 ---
 
 - blanch in boiling water 2 to 3 minutes, until it's slightly tender but still has its color
