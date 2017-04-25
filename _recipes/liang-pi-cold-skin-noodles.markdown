@@ -6,6 +6,7 @@ tags:
 - Chinese
 ingredients:
 - noodles
+source: Xi'an Famous Foods
 ingredients_list:
 - unit: 
   unit_type: 
