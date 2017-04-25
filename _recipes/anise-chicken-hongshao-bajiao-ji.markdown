@@ -3,6 +3,7 @@ title: Anise Chicken (Hongshao Bajiao Ji)
 date: 2017-04-24 21:39:00 -04:00
 tags:
 - Chinese
+- Sichuanese
 ingredients:
 - chicken
 notes: Improves with age. Should be made far enough in advance so it can be served
